@@ -1,4 +1,4 @@
-#TextNormalization with Seq2Seq 
+# TextNormalization with Seq2Seq 
 
 This is code repo for our AAAI ICWSM 2019 paper "Adapting Sequence to Sequence models for Text Normalization in Social Media", 
 where we explore several Seq2Seq variations for normalizing social media text.
