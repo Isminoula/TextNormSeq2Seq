@@ -69,8 +69,7 @@ python main.py -logfolder -save_dir S2SChar -gpu 5 -input char -attention -bias 
  
 ### Pretrained models - Reproducibility
 We have done our best to ensure reproducibility of our results, however this is not always [guaranteed](https://pytorch.org/docs/stable/notes/randomness.html).
-As an extra reproducibility step, we also release our best performing models in the `pretrained_models` folder of this repository.
-You can try them by setting the flag `eval` and updating the model folders in your python commands, for example:
+As an extra reproducibility step, we also release our best performing models. Just unzip the `pretrained_models.zip` found [here](https://uofi.box.com/v/TextNormSeq2SeqModels) and try them by setting the flag `eval` and updating the model folders in your python commands, for example:
 - Pre-trained hybrid model (**HS2S**):
 ```bash
 python main.py -eval -logfolder -save_dir hybrid_model -gpu 0 -load_from pretrained_models/word_model/model_50_word.pt -char_model pretrained_models/spelling_model/model_50_spelling.pt -input hybrid -data_augm -noise_ratio 0.1 -lowercase -bos -eos -batch_size 32 -share_vocab
