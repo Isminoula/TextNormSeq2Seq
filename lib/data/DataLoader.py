@@ -106,14 +106,14 @@ class DataLoader(object):
                                     target_vocab.add_words(owordv)
                                     tweet.set_input(iwordv)
                                     tweet.set_output(owordv)
-                                    word_tweets.append(tweet)
+                                    word_tweets.append(copy.deepcopy(tweet))
             else:
                 inp_i, inp_o = self.vector_repr(inp_i, inp_o, update_mappings)
                 source_vocab.add_words(inp_i)
                 target_vocab.add_words(inp_o)
                 tweet.set_input(inp_i)
                 tweet.set_output(inp_o)
-                word_tweets.append(tweet)
+                word_tweets.append(copy.deepcopy(tweet))
 
 
         tweets = word_tweets
